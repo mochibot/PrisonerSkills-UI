@@ -1,0 +1,35 @@
+// Mixins Here
+
+.hidden() {
+  display: none;
+}
+
+//link styling
+.link-style(@link-font-color) {
+  text-decoration: none;
+  color: @link-font-color;
+}
+
+//button styling
+.button-color(@btn-bg, @btn-font) {
+  background: @btn-bg;
+  color: @btn-font;
+  
+  &:hover {
+    background:@btn-font;
+    color: @btn-bg;
+    transition: all 0.3s ease;
+  }
+}
+
+.button-style(@radius: 5px, @btn-font-size: 1.6rem, @btn-width: 100px) {
+  display: block;
+  border-radius: @radius;
+  font-size: @btn-font-size;
+  width: @btn-width;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+

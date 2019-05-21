@@ -2,138 +2,214 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 * {
   box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
-  
 }
-
-h2 {
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #242323;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-size: 2rem;
 }
-
 p {
   font-size: 1.6rem;
   line-height: 2rem;
 }
-
 .container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
-
 header {
   width: 100%;
-  background: rgb(103, 131, 190);
+  background: #6783be;
   height: 60px;
 }
-
-.navbar {
+header .navbar {
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.navbar h1{
+header .navbar h1 {
   font-size: 3.5rem;
   color: white;
   padding: 1%;
 }
-
-.navbar .nav-link {
+header .navbar .nav-link {
   width: 80%;
   display: flex;
   justify-content: flex-end;
 }
-.navbar .nav-link a {
+header .navbar .nav-link a {
   font-size: 1.6rem;
   color: white;
   text-decoration: none;
   margin: 0 1%;
   padding: 1rem;
 }
-
-.navbar .nav-link :last-child {
+header .navbar .nav-link :last-child {
   border: 2px solid #fff;
   border-radius: 15px;
 }
-
 .about {
   top: 60px;
   height: 55vh;
-  background: rgb(103, 131, 190);
+  background: #6783be;
   color: white;
   text-align: center;
-}
-
-.about img {
-  width: 100%;
 }
 .top-images {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
 .top-images img {
-  align-self: center; /* or else will stretch images */
+  align-self: center;
+  /* or else will stretch images */
   width: 30%;
-  padding: 01%
+  padding: 1%;
 }
-
+.rationale {
+  color: white;
+  text-align: center;
+  background: #6783be;
+  padding: 5%;
+}
 .main-content .features {
   display: flex;
   width: 80%;
@@ -141,24 +217,14 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
-.rationale {
-  color: white;
-  text-align: center;
-  background: rgb(103, 131, 190);
-  padding: 5%;
-}
-
-.features img {
+.main-content .features img {
   display: block;
   width: 45%;
 }
-
-.features .features-text {
+.main-content .features .features-text {
   margin: 5%;
 }
-
-.features .features-text li{
+.main-content .features .features-text li {
   font-size: 1.6rem;
   padding: 1.6rem 0;
   list-style-type: circle;
