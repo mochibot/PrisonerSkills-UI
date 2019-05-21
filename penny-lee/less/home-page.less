@@ -1,9 +1,51 @@
 .about {
   top: 60px;
-  height: 55vh;
-  background: rgb(103, 131, 190);
+  background: linear-gradient(to left, fadein(@main-blue6, 20%), fadein(@main-blue1, 20%));
   color: white;
-  text-align: center;
+  height: 80vh;
+  min-height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &-text {
+    align-self: center;
+    margin-left: 2%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+      h2 {
+        font-size: 4rem;
+        padding: 2rem 0;
+      }
+
+      p {
+        padding: 2rem 0;
+      }
+
+    button {
+      .button-color(white, @main-blue7);
+      .button-style(@btn-width: 150px);
+    }
+  }
+
+  .image-container {
+    width: 70vw;
+    min-width: 500px;
+    background: linear-gradient(to right, fadein(@main-blue6, 20%), fadein(@main-blue1, 20%));
+    border-top-left-radius: 350px;
+    border-top-right-radius: 350px;
+
+    img {
+      width: 70%;
+      margin: 0 15%;
+      position: relative;
+    }  
+  }
+
 }
 
 .top-images {
@@ -21,36 +63,56 @@
 .rationale {
   color: white;
   text-align: center;
-  background: rgb(103, 131, 190);
+  background: @main-blue3;
   padding: 5%;
 }
 
 .main-content {
-
-  .features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .content-cards {
     display: flex;
-    width: 80%;
-    margin: 3% auto;
-    justify-content: space-between;
+    margin: 0 10%;
     align-items: center;
   
     img {
       display: block;
-      width: 45%;
+      width: 250px;
     }
 
-    .features-text {
+    .content-text {
       margin: 5%;
+
+      h2 {
+        font-weight: bold;
+      }
+
+      ul {
+        padding: 0 1.6rem;
+        list-style-position: outside;
+      }
 
       li{
         font-size: 1.6rem;
         padding: 1.6rem 0;
-        list-style-type: circle;
-        list-style-position: inside;
+       
+      }
+      li:before {
+        content: '\2714 ';
+        margin-left: -1em;
+        margin-right: .2em;
       }
     }
   }
 }
+
+footer {
+  background: @footer-gray;
+  color: @main-blue7;
+}
+
 
 
 

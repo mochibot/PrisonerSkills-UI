@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  background: @nav-bg-color;
+  background: white;
   height: 60px;
 
   .navbar {
@@ -9,30 +9,43 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
-    h1{
-      font-size: 3.5rem;
-      color: white;
-      padding: 1%;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 50px;
+      }
+
+      h1{
+        font-size: 3.5rem;
+        color: @nav-font-color;
+        padding: 0 5%;
+      }
     }
-  
     .nav-link {
-      width: 80%;
+      width: 70%;
       display: flex;
       justify-content: flex-end;
 
       a {
         font-size: 1.6rem;
-        color: white;
+        color: @nav-font-color;
         text-decoration: none;
         margin: 0 1%;
         padding: 1rem;
-      }
+        border: 3px solid white;
 
-      :last-child {
-        border: 2px solid #fff;
-        border-radius: 15px;
+        &:hover {
+          border-bottom: 3px solid @main-blue7; 
+        }
       }
+    }
+
+    button {
+      .button-color(@main-blue7, white);
+      .button-style(@btn-width: 150px)
     }
   }
 }

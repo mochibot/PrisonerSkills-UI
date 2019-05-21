@@ -1,5 +1,4 @@
-// Mixins Here
-
+  // Mixins Here
 .hidden() {
   display: none;
 }
@@ -14,22 +13,24 @@
 .button-color(@btn-bg, @btn-font) {
   background: @btn-bg;
   color: @btn-font;
+  border: 2px solid @btn-bg;
   
   &:hover {
     background:@btn-font;
     color: @btn-bg;
-    transition: all 0.3s ease;
+    border: 2px solid @btn-bg;
+    //transition: all 0.3s ease;
   }
 }
 
-.button-style(@radius: 5px, @btn-font-size: 1.6rem, @btn-width: 100px) {
+.button-style(@radius: 10px, @btn-font-size: 1.6rem, @btn-width: 100px) {
   display: block;
   border-radius: @radius;
   font-size: @btn-font-size;
   width: @btn-width;
   text-align: center;
-  padding: 1rem;
+  padding: 0.8rem 2rem;
   cursor: pointer;
-  font-weight: 600;
+  outline: none;
 }
 

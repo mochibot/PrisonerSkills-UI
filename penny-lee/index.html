@@ -12,18 +12,27 @@
   <div class='container'> 
     <header>
       <div class='navbar'>
-        <h1>OVERSITE</h1>
+        <div class='logo'>
+          <img src='./images/Favicon.png' alt='logo'>
+          <h1>Oversite</h1>
+        </div>
         <div class='nav-link'>
           <a href='#'>Home</a>
+          <a href='#features'>Features</a>
           <a href='#'>About</a>
-          <a href='#'>Login</a>
         </div>
+        <button>Login/Register</button>
       </div>
     </header>
     <section class='about'>
-      <h2>Prison management made easy</h2>
-      <p>Helping inmates re-enter the community</p>
-      <button>Try it now</button>
+      <div class='about-text'>
+        <h2>Helping inmates find a second chance</h2>
+        <p>A management tool that showcases inmates' skill sets and connects inmates with potential employers.</p>
+        <button>Try it now</button>
+      </div>
+      <div class='image-container'>
+        <img src='./images/sample.png' alt='preview of product'>
+      </div>
     </section>
     <section class='top-images'>
       <img src='./images/labor.png'>
@@ -34,36 +43,56 @@
       <h2>Did you know?</h2>
       <p>Today, about 2.3 million people are locked up in the US.</p>
       <p>Formerly incarcerated people are unemployed at a rate of over 27%</p>
-      <p>Some stats</p>
+      <p>Giving inmates a second chance</p>
+      <p>Helping inmates re-enter the community</p>
     </section>
-    <section class='main-content'>
-      <div class='features'>
-      <img src='./images/admin1.png'>
-      <div class='features-text'>
-        <h2>Prison administrators</h2>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-        </ul>
-      </div>
-      </div>
-      <div class='features'>
-        <img src='./images/hiring.png'>
-        <div class='features-text'>
-        <h2>Potential Employers</h2>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-        </ul>
+    <section id='features'> 
+      <div class='main-content'>
+        <div class='content-cards'>
+          <img src='./images/aboutme.png'>
+          <div class='content-text'>
+            <h2>Individualized inmate profiles</h2>
+            <ul>
+              <li>Each prisoner has a profile that showcases his/her strengths, work experiences and availability</li>
+            </ul>
+          </div>
         </div>
-      </div>
+        <div class='content-cards'>
+          <div class='content-text'>
+            <h2>Effortless management</h2>
+            <ul>
+              <li>Prison administrators can quickly get onboard by creating an account for their prison, thereby allowing them to create, edit or delete prisoner profiles</li>
+            </ul>
+          </div>
+          <img src='./images/admin1.png'>
+        </div>
+        <div class='content-cards'>
+          <img src='./images/hiring.png'>
+          <div class='content-text'>
+            <h2>Intuitive navigation</h2>
+            <ul>
+              <li>Potential employers can easily search through the list of prisons to see the available inmates and their profiles</li>
+            </ul>
+          </div>
+        </div>
+        <div class='content-cards'>
+            <div class='content-text'>
+              <h2>Search by location</h2>
+              <p>In alpha testing</p>
+              <ul>
+                <li>Employers will soon be able to search for nearby prisons and inmates by zip code</li>
+              </ul>
+            </div>
+            <img src='./images/location.png'>
+          </div>
+        </div>
       </section>
-  </div>
-  <footer>
-
-  </footer>
+      <footer>
+        <p>Oversite</p>
+        <p>Giving inmates a second chance</p>
+        <P>Privacy 2019</P>
+      </footer>
+    </div>
 </body>
 
 </html>
