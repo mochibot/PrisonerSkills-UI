@@ -113,6 +113,10 @@ header {
 
 .about {
   top: 60px;
+  height: 55vh;
+  background: rgb(103, 131, 190);
+  color: white;
+  text-align: center;
 }
 
 .about img {
@@ -122,19 +126,18 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  max-height: 300px;
 }
 
 .top-images img {
+  align-self: center; /* or else will stretch images */
   width: 30%;
-  padding: 2%;
+  padding: 01%
 }
 
 .main-content .features {
   display: flex;
   width: 80%;
-  margin: 8% auto;
-  max-height: 300px;
+  margin: 3% auto;
   justify-content: space-between;
   align-items: center;
 }
@@ -143,8 +146,7 @@ header {
   color: white;
   text-align: center;
   background: rgb(103, 131, 190);
-  height: 50vh;
-  padding: 3%;
+  padding: 5%;
 }
 
 .features img {
