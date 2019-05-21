@@ -115,6 +115,9 @@ header {
   top: 60px;
 }
 
+.about img {
+  width: 100%;
+}
 .top-images {
   width: 100%;
   display: flex;
