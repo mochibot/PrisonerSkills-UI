@@ -8,6 +8,15 @@
   justify-content: space-between;
   align-items: flex-end;
 
+  @media @tablet {
+    height: 70vh;
+  }
+
+  @media @phone {
+    flex-direction: column;
+    height: 100vh;
+  }
+
   &-text {
     align-self: center;
     margin-left: 2%;
@@ -17,9 +26,23 @@
     justify-content: center;
     align-items: center;
 
+    @media @tablet {
+      align-self: flex-end;
+      margin-bottom: 5rem;
+    }
+
       h2 {
         font-size: 4rem;
         padding: 2rem 0;
+
+        @media @tablet {
+          font-size: 3.5rem;
+          padding: 1rem 0;
+        }
+
+        @media @phone {
+          padding: 2rem 1rem;
+        }
       }
 
       p {
@@ -30,6 +53,8 @@
       .button-color(white, @main-blue7);
       .button-style(@btn-width: 150px);
     }
+
+ 
   }
 
   .image-container {
@@ -50,37 +75,145 @@
 
 .top-images {
   width: 100%;
+  margin: 2rem 0;
   display: flex;
   justify-content: center;
 
-  img {
-    align-self: center; /* or else will stretch images */
-    width: 30%;
-    padding: 01%
+  @media @phone {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-images-container {
+    width: 29vw;
+
+    @media @phone {
+      width: 90%;
+    }
+    
+    .top-images-overlay {
+      position: absolute;
+      //background: rgba(255, 255, 255, 0.3);
+      z-index: -1;
+      color: @main-color;
+      text-align: center;
+      width: 29vw;
+      opacity: 0;
+
+      @media @phone {
+        width: 90%;
+      }
+
+      p {
+        font-size: 1.8rem;
+        font-weight: bold;
+        padding: 32% 13%;
+
+        @media @tablet {
+          font-size: 1.6rem;
+          padding: 27% 13%;
+        }
+
+        @media @phone {
+          font-size: 1.8rem;
+          font-weight: bold;
+          padding: 33% 20%;
+        }
+      }
+    }
+    
+
+    img {
+      width: 100%;
+      //align-self: center; /* or else will stretch images */
+      padding: 1%;
+      position: relative;
+      z-index: -2;
+    }
   }
 }
 
+.top-images-container:hover .top-images-overlay {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.top-images-container:hover img {
+  transition: all 0.3s ease;
+  opacity: 0.2;
+}
+
+
+
+
 .rationale {
   color: white;
-  text-align: center;
   background: @main-blue3;
-  padding: 5%;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  margin: 2rem 0;
+
+  h2 {
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  ul {
+    list-style-position: outside;
+    padding: 0 10rem;
+
+    @media @phone {
+      padding: 0 5rem;
+    }
+
+    li {
+      padding: 1.8rem 0;
+      list-style-type: disc;
+    }
+  }
+
+
+}
+
+#features > h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem;
 }
 
 .main-content {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   .content-cards {
     display: flex;
     margin: 0 10%;
     align-items: center;
-  
+
+    @media @tablet {
+      margin: 0;
+    }
+
+    @media @phone {
+      flex-direction: column;
+    }
+
     img {
       display: block;
       width: 250px;
+
+      @media @phone {
+        order: -1;
+        width: 70%;
+      }
     }
+
+
 
     .content-text {
       margin: 5%;
@@ -106,6 +239,110 @@
       }
     }
   }
+
+  .last-card {
+    width: 80%;
+
+    @media @tablet {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+.about-team {
+  h2 {
+    color: @main-blue7;
+    padding: 3rem 0;
+
+  }
+  
+  .team {
+    display: flex;
+    flex-direction: column;
+    
+    .team-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      color: white;    
+      font-size: 3rem;
+      padding: 2rem 0;
+      overflow: hidden;
+      cursor: pointer;
+
+      .team-content {
+        background: white;
+        border-radius: 15px;
+        margin: 2% 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+          width: 30%;
+          padding: 1%;
+        }
+
+        .team-name {
+          width: 40%;
+
+          p {
+            color: @main-color;
+            font-size: 3rem;
+            padding: 3rem;
+          }
+
+          a {
+            text-decoration: none;
+            color: @main-color;
+          }
+          a:hover {
+            color: @main-blue7;
+          }
+
+          .fab {
+            font-size: 5rem;
+          }
+        }
+      }
+      
+      .team-hidden {
+        display: none;
+      }
+    }
+
+
+
+
+    .team-lead {
+      background: @main-blue1;
+    }
+
+    .front-end {
+      background: @main-blue2;
+    }
+
+    .back-end {
+      background: @main-blue3;
+    }
+
+    .ux-design {
+      background: @main-blue4;
+    }
+
+    .ui-design1 {
+      background: @main-blue5;
+    }
+
+    .ui-design2 {
+      background: @main-blue6;
+    }
+  }
 }
 
 footer {
@@ -113,7 +350,83 @@ footer {
   color: @main-blue7;
 }
 
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  h3 {
+    padding: 1.8rem 0;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-around;
+
+    @media @tablet {
+      flex-wrap: wrap;
+    }
+
+    .footer-connect {
+      a {
+        text-decoration: none;
+        color: white;
+        padding-right: 1.8rem;
+      }
+
+      a:hover {
+        color: @main-blue7;
+      }
+
+      .fab {
+        font-size: 3rem;
+      }
+    }
+
+    .footer-subscribe {
+      width: 30%;
+
+      @media @tablet {
+        width: 80%;
+        margin: 2rem;
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+
+        input {
+          font-family: cursive;
+          font-size: 1.6rem;
+        }
+
+        button {
+          .button-color(@footer-gray, white);
+          border: 2px solid white;
+          .button-style(@radius: 0, @btn-font-size: 1.6rem, @btn-width: auto);
+        }
+      }
+    }
 
 
+  }
+  
+  .footer-bottom {
+    text-align: center;
 
+    p {
+      font-size: 1.4rem;
+      padding: 3rem 0 1.6rem 0 ;
+    }
 
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    a:hover {
+      color: @main-blue7;
+    }
+  }
+}

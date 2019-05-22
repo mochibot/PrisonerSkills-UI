@@ -158,6 +158,11 @@ header {
   background: white;
   height: 60px;
 }
+@media screen and (max-width: 500px) {
+  header {
+    display: none;
+  }
+}
 header .navbar {
   width: 100%;
   margin: 0 auto;
@@ -174,7 +179,7 @@ header .navbar .logo img {
 }
 header .navbar .logo h1 {
   font-size: 3.5rem;
-  color: #d8d8d8;
+  color: #8d8d8d;
   padding: 0 5%;
 }
 header .navbar .nav-link {
@@ -184,13 +189,16 @@ header .navbar .nav-link {
 }
 header .navbar .nav-link a {
   font-size: 1.6rem;
-  color: #d8d8d8;
+  color: #8d8d8d;
   text-decoration: none;
   margin: 0 1%;
   padding: 1rem;
   border: 3px solid white;
 }
 header .navbar .nav-link a:hover {
+  border-bottom: 3px solid #0071CC;
+}
+header .navbar .nav-link .selected-link {
   border-bottom: 3px solid #0071CC;
 }
 header .navbar button {
@@ -200,7 +208,7 @@ header .navbar button {
   display: block;
   border-radius: 10px;
   font-size: 1.6rem;
-  width: 150px;
+  width: auto;
   text-align: center;
   padding: 0.8rem 2rem;
   cursor: pointer;
@@ -210,6 +218,7 @@ header .navbar button:hover {
   background: white;
   color: #0071CC;
   border: 2px solid #0071CC;
+  transition: all 0.3s ease;
 }
 .about {
   top: 60px;
@@ -221,6 +230,17 @@ header .navbar button:hover {
   justify-content: space-between;
   align-items: flex-end;
 }
+@media screen and (max-width: 800px) {
+  .about {
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about {
+    flex-direction: column;
+    height: 100vh;
+  }
+}
 .about-text {
   align-self: center;
   margin-left: 2%;
@@ -230,9 +250,26 @@ header .navbar button:hover {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 800px) {
+  .about-text {
+    align-self: flex-end;
+    margin-bottom: 5rem;
+  }
+}
 .about-text h2 {
   font-size: 4rem;
   padding: 2rem 0;
+}
+@media screen and (max-width: 800px) {
+  .about-text h2 {
+    font-size: 3.5rem;
+    padding: 1rem 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about-text h2 {
+    padding: 2rem 1rem;
+  }
 }
 .about-text p {
   padding: 2rem 0;
@@ -254,6 +291,7 @@ header .navbar button:hover {
   background: #0071CC;
   color: white;
   border: 2px solid white;
+  transition: all 0.3s ease;
 }
 .about .image-container {
   width: 70vw;
@@ -269,22 +307,103 @@ header .navbar button:hover {
 }
 .top-images {
   width: 100%;
+  margin: 2rem 0;
   display: flex;
   justify-content: center;
 }
-.top-images img {
-  align-self: center;
-  /* or else will stretch images */
-  width: 30%;
+@media screen and (max-width: 500px) {
+  .top-images {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.top-images .top-images-container {
+  width: 29vw;
+}
+@media screen and (max-width: 500px) {
+  .top-images .top-images-container {
+    width: 90%;
+  }
+}
+.top-images .top-images-container .top-images-overlay {
+  position: absolute;
+  z-index: -1;
+  color: #242323;
+  text-align: center;
+  width: 29vw;
+  opacity: 0;
+}
+@media screen and (max-width: 500px) {
+  .top-images .top-images-container .top-images-overlay {
+    width: 90%;
+  }
+}
+.top-images .top-images-container .top-images-overlay p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 32% 13%;
+}
+@media screen and (max-width: 800px) {
+  .top-images .top-images-container .top-images-overlay p {
+    font-size: 1.6rem;
+    padding: 27% 13%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .top-images .top-images-container .top-images-overlay p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 33% 20%;
+  }
+}
+.top-images .top-images-container img {
+  width: 100%;
   padding: 1%;
+  position: relative;
+  z-index: -2;
+}
+.top-images-container:hover .top-images-overlay {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.top-images-container:hover img {
+  transition: all 0.3s ease;
+  opacity: 0.2;
 }
 .rationale {
   color: white;
-  text-align: center;
   background: #4988CD;
-  padding: 5%;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  margin: 2rem 0;
+}
+.rationale h2 {
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.rationale ul {
+  list-style-position: outside;
+  padding: 0 10rem;
+}
+@media screen and (max-width: 500px) {
+  .rationale ul {
+    padding: 0 5rem;
+  }
+}
+.rationale ul li {
+  padding: 1.8rem 0;
+  list-style-type: disc;
+}
+#features > h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem;
 }
 .main-content {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -294,9 +413,25 @@ header .navbar button:hover {
   margin: 0 10%;
   align-items: center;
 }
+@media screen and (max-width: 800px) {
+  .main-content .content-cards {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-content .content-cards {
+    flex-direction: column;
+  }
+}
 .main-content .content-cards img {
   display: block;
   width: 250px;
+}
+@media screen and (max-width: 500px) {
+  .main-content .content-cards img {
+    order: -1;
+    width: 70%;
+  }
 }
 .main-content .content-cards .content-text {
   margin: 5%;
@@ -317,7 +452,166 @@ header .navbar button:hover {
   margin-left: -1em;
   margin-right: 0.2em;
 }
+.main-content .last-card {
+  width: 80%;
+}
+@media screen and (max-width: 800px) {
+  .main-content .last-card {
+    width: 100%;
+  }
+}
+.about-team h2 {
+  color: #0071CC;
+  padding: 3rem 0;
+}
+.about-team .team {
+  display: flex;
+  flex-direction: column;
+}
+.about-team .team .team-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 3rem;
+  padding: 2rem 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.about-team .team .team-card .team-content {
+  background: white;
+  border-radius: 15px;
+  margin: 2% 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-team .team .team-card .team-content img {
+  width: 30%;
+  padding: 1%;
+}
+.about-team .team .team-card .team-content .team-name {
+  width: 40%;
+}
+.about-team .team .team-card .team-content .team-name p {
+  color: #242323;
+  font-size: 3rem;
+  padding: 3rem;
+}
+.about-team .team .team-card .team-content .team-name a {
+  text-decoration: none;
+  color: #242323;
+}
+.about-team .team .team-card .team-content .team-name a:hover {
+  color: #0071CC;
+}
+.about-team .team .team-card .team-content .team-name .fab {
+  font-size: 5rem;
+}
+.about-team .team .team-card .team-hidden {
+  display: none;
+}
+.about-team .team .team-lead {
+  background: #0F69CC;
+}
+.about-team .team .front-end {
+  background: #2B77CB;
+}
+.about-team .team .back-end {
+  background: #4988CD;
+}
+.about-team .team .ux-design {
+  background: #7AA4D3;
+}
+.about-team .team .ui-design1 {
+  background: #9AB6D5;
+}
+.about-team .team .ui-design2 {
+  background: #A5BBD4;
+}
 footer {
-  background: #d8d8d8;
+  background: #6b6b6b;
+  color: #0071CC;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.footer-container h3 {
+  padding: 1.8rem 0;
+}
+.footer-container .footer-top {
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 800px) {
+  .footer-container .footer-top {
+    flex-wrap: wrap;
+  }
+}
+.footer-container .footer-top .footer-connect a {
+  text-decoration: none;
+  color: white;
+  padding-right: 1.8rem;
+}
+.footer-container .footer-top .footer-connect a:hover {
+  color: #0071CC;
+}
+.footer-container .footer-top .footer-connect .fab {
+  font-size: 3rem;
+}
+.footer-container .footer-top .footer-subscribe {
+  width: 30%;
+}
+@media screen and (max-width: 800px) {
+  .footer-container .footer-top .footer-subscribe {
+    width: 80%;
+    margin: 2rem;
+  }
+}
+.footer-container .footer-top .footer-subscribe form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+.footer-container .footer-top .footer-subscribe form input {
+  font-family: cursive;
+  font-size: 1.6rem;
+}
+.footer-container .footer-top .footer-subscribe form button {
+  background: #6b6b6b;
+  color: white;
+  border: 2px solid #6b6b6b;
+  border: 2px solid white;
+  display: block;
+  border-radius: 0;
+  font-size: 1.6rem;
+  width: auto;
+  text-align: center;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  outline: none;
+}
+.footer-container .footer-top .footer-subscribe form button:hover {
+  background: white;
+  color: #6b6b6b;
+  border: 2px solid #6b6b6b;
+  transition: all 0.3s ease;
+}
+.footer-container .footer-bottom {
+  text-align: center;
+}
+.footer-container .footer-bottom p {
+  font-size: 1.4rem;
+  padding: 3rem 0 1.6rem 0;
+}
+.footer-container .footer-bottom a {
+  text-decoration: none;
+  color: white;
+}
+.footer-container .footer-bottom a:hover {
   color: #0071CC;
 }

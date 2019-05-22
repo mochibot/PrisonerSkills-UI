@@ -3,6 +3,10 @@ header {
   background: white;
   height: 60px;
 
+  @media @phone {
+    display: none;
+  }
+
   .navbar {
     width: 100%;
     margin: 0 auto;
@@ -41,11 +45,15 @@ header {
           border-bottom: 3px solid @main-blue7; 
         }
       }
+
+      .selected-link {
+        border-bottom: 3px solid @main-blue7; 
+      }
     }
 
     button {
       .button-color(@main-blue7, white);
-      .button-style(@btn-width: 150px)
+      .button-style(@btn-width: auto;)
     }
   }
 }

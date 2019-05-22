@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Oversite</title>
+  <title>Oversite | Home</title>
   <link rel='stylesheet' href='./CSS/index.css'>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
 </head>
 <body>
@@ -19,9 +20,9 @@
         <div class='nav-link'>
           <a href='#'>Home</a>
           <a href='#features'>Features</a>
-          <a href='#'>About</a>
+          <a href='./about.html'>About</a>
         </div>
-        <button>Login/Register</button>
+        <button>Login</button>
       </div>
     </header>
     <section class='about'>
@@ -35,19 +36,38 @@
       </div>
     </section>
     <section class='top-images'>
-      <img src='./images/labor.png'>
-      <img src='./images/progression.png'>
-      <img src='./images/interview.png'>
+      <div class='top-images-container'>
+        <div class='top-images-overlay'>
+          <p>Inmates gained skills while in prison or before incarceration.</p>
+        </div>
+        <img src='./images/labor.png'>
+      </div>
+      <div  class='top-images-container'>
+        <div class='top-images-overlay'>
+          <p>The skills are transferable to future career paths</p>
+        </div>
+        <img src='./images/progression.png'>
+      </div>
+      <div  class='top-images-container'>
+        <div class='top-images-overlay'>
+          <p>Help inmates re-enter the community, and mutually benefit employers and society</p>
+        </div>
+        <img src='./images/interview.png'>
+      </div>
     </section>
     <section class='rationale'>
-      <h2>Did you know?</h2>
-      <p>Today, about 2.3 million people are locked up in the US.</p>
-      <p>Formerly incarcerated people are unemployed at a rate of over 27%</p>
-      <p>Giving inmates a second chance</p>
-      <p>Helping inmates re-enter the community</p>
+      <div>
+        <h2>Did you know?</h2>
+        <ul>
+          <li>Today, about 2.3 million people are locked up in the US.</li>
+          <li>Recent analysis has shown that formerly incarcerated people are unemployed at a rate of over 27%</li>
+          <li>Unemployment is unemployment is highest within the first 2 years of release, when they are most vulnerable to re-incarceration.</li>
+        </ul>
+      </div>
     </section>
     <section id='features'> 
-      <div class='main-content'>
+      <h2>Product features</h2>
+      <div class='main-content'>  
         <div class='content-cards'>
           <img src='./images/aboutme.png'>
           <div class='content-text'>
@@ -75,24 +95,57 @@
             </ul>
           </div>
         </div>
-        <div class='content-cards'>
-            <div class='content-text'>
-              <h2>Search by location</h2>
-              <p>In alpha testing</p>
-              <ul>
-                <li>Employers will soon be able to search for nearby prisons and inmates by zip code</li>
-              </ul>
+        <div class='content-cards last-card'>
+          <div class='content-text '>
+            <h2>Search by location</h2>
+            <p>In alpha testing</p>
+            <ul>
+              <li>Employers will soon be able to search for nearby prisons and inmates by zip code</li>
+            </ul>
+          </div>
+          <img src='./images/location.png'>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class='footer-container'>
+        <div class='footer-top'>
+          <div class='footer-product'>
+            <h3>Product</h3>
+            <p>Demo</p>
+            <p>Pricing</p>
+            <p>Security</p>
+          </div>
+          <div class='footer-company'>
+            <h3>Company</h3>
+            <p>Careers</p>
+            <p>Press</p>
+            <p>Support</p>
+          </div>
+          <div class='footer-connect'>
+            <h3>Connect with us</h3>
+            <div class='footer-links'>
+              <a href='https://github.com/buildweekprisonerskills' target='_blank' class="fab fa-github"></a>
+              <a href='https://twitter.com/lambdaschool' target='_blank' class="fab fa-twitter"></a>
+              <a href='https://www.facebook.com/LambdaSchoolOnline/' target='_blank' class="fab fa-facebook-square"></a>
             </div>
-            <img src='./images/location.png'>
+          </div>
+          <div class='footer-subscribe'>
+            <h3>Stay up to date with Oversite</h3>
+            <p>Subscribe to our newsletter to receive updates on our product. Your information is safe and will never be shared. </p>
+            <form>
+              <input type='email' placeholder='Enter your email'>
+              <button type='submit'>Subscribe</button> 
+            </form>
           </div>
         </div>
-      </section>
-      <footer>
-        <p>Oversite</p>
-        <p>Giving inmates a second chance</p>
-        <P>Privacy 2019</P>
-      </footer>
-    </div>
+        <div class='footer-bottom'>
+          <p>&copy; Lambda School 2019  |  Oversite  |  Giving inmates a second chance  |  Illustrations courtesy of <a href='https://undraw.co/'>unDraw</a></p>
+        </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>
