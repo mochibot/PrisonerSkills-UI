@@ -9,20 +9,23 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <script src='./components/about/about.js' async></script>
+  <script src='./components/navigation/navigation.js' async></script>
 </head>
 <body>
     <div class='container'>
       <header>
         <div class='navbar'>
           <div class='logo'>
-            <img src='./images/Favicon.png' alt='logo'>
-            <h1>Oversite</h1>
+            <h1 id='sitename-short'>OS</h1>
+            <h1 id='sitename-full'>Oversite</h1>
           </div>
+          <div class="fas fa-bars"></div>
+          <div class="fas fa-times"></div>
           <div class='nav-link'>
             <a href='./index.html'>Home</a>
-            <a href='#' class='selected-link'>About</a>
+            <a href='./about.html' class='selected-link'>About</a>
+            <button>Login</button>
           </div>
-          <button>Login/Register</button>
         </div>
       </header>
       <section class='about-team'>
