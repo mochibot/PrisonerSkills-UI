@@ -154,6 +154,16 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.scroll-top {
+  display: none;
+  top: 50vh;
+  position: fixed;
+  right: 0;
+}
+.scroll-top .fas {
+  font-size: 4rem;
+  color: #0071CC;
+}
 header .navbar {
   position: fixed;
   top: 0;
@@ -168,7 +178,7 @@ header .navbar {
   padding: 2rem 0;
   transition: all 0.3s ease;
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   header .navbar {
     height: 70px;
     padding: 0.5rem;
@@ -198,7 +208,7 @@ header .navbar .fas {
 header .navbar .fa-bars {
   display: none;
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   header .navbar .fa-bars {
     display: block;
   }
@@ -245,7 +255,13 @@ header .navbar .nav-link button:hover {
 header .navbar .nav-link .selected-link {
   border-bottom: 3px solid #0071CC;
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
+  header .navbar .nav-link .selected-link {
+    border-bottom: 3px solid #A5BBD4;
+    color: #8d8d8d;
+  }
+}
+@media only screen and (max-width: 500px) {
   header .navbar .nav-link {
     transform: translateX(500px);
     display: flex;
@@ -282,12 +298,12 @@ header .nav-scroll {
   justify-content: space-between;
   align-items: flex-end;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .about {
     height: 70vh;
   }
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .about {
     margin-top: 60px;
     flex-direction: column;
@@ -303,7 +319,7 @@ header .nav-scroll {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .about-text {
     align-self: flex-end;
     margin-bottom: 5rem;
@@ -313,13 +329,13 @@ header .nav-scroll {
   font-size: 4rem;
   padding: 2rem 0;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .about-text h2 {
     font-size: 3.5rem;
     padding: 1rem 0;
   }
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .about-text h2 {
     padding: 2rem 1rem;
   }
@@ -364,7 +380,7 @@ header .nav-scroll {
   display: flex;
   justify-content: center;
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .top-images {
     flex-direction: column;
     align-items: center;
@@ -373,7 +389,7 @@ header .nav-scroll {
 .top-images .top-images-container {
   width: 29vw;
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .top-images .top-images-container {
     width: 90%;
   }
@@ -386,7 +402,7 @@ header .nav-scroll {
   width: 29vw;
   opacity: 0;
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .top-images .top-images-container .top-images-overlay {
     width: 90%;
   }
@@ -396,13 +412,13 @@ header .nav-scroll {
   font-weight: bold;
   padding: 32% 13%;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .top-images .top-images-container .top-images-overlay p {
     font-size: 1.6rem;
     padding: 27% 13%;
   }
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .top-images .top-images-container .top-images-overlay p {
     font-size: 1.8rem;
     font-weight: bold;
@@ -440,7 +456,7 @@ header .nav-scroll {
   list-style-position: outside;
   padding: 0 10rem;
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .rationale ul {
     padding: 0 5rem;
   }
@@ -466,12 +482,12 @@ header .nav-scroll {
   margin: 0 10%;
   align-items: center;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .main-content .content-cards {
     margin: 0;
   }
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .main-content .content-cards {
     flex-direction: column;
   }
@@ -480,7 +496,7 @@ header .nav-scroll {
   display: block;
   width: 250px;
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .main-content .content-cards img {
     order: -1;
     width: 70%;
@@ -504,14 +520,18 @@ header .nav-scroll {
   content: '\2714 ';
   margin-left: -1em;
   margin-right: 0.2em;
+  line-height: 2rem;
 }
 .main-content .last-card {
   width: 80%;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .main-content .last-card {
     width: 100%;
   }
+}
+.about-team {
+  margin-top: 80px;
 }
 .about-team h2 {
   color: #0071CC;
@@ -540,18 +560,50 @@ header .nav-scroll {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0;
+}
+@media only screen and (max-width: 500px) {
+  .about-team .team .team-card .team-content {
+    flex-direction: column;
+  }
 }
 .about-team .team .team-card .team-content img {
   width: 30%;
   padding: 1%;
 }
+@media only screen and (max-width: 800px) {
+  .about-team .team .team-card .team-content img {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .about-team .team .team-card .team-content img {
+    width: 80%;
+  }
+}
 .about-team .team .team-card .team-content .team-name {
   width: 40%;
+}
+@media only screen and (max-width: 800px) {
+  .about-team .team .team-card .team-content .team-name {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .about-team .team .team-card .team-content .team-name {
+    width: 80%;
+  }
 }
 .about-team .team .team-card .team-content .team-name p {
   color: #242323;
   font-size: 3rem;
   padding: 3rem;
+}
+@media only screen and (max-width: 800px) {
+  .about-team .team .team-card .team-content .team-name p {
+    font-size: 2.6rem;
+    padding: 2rem;
+  }
 }
 .about-team .team .team-card .team-content .team-name a {
   text-decoration: none;
@@ -600,7 +652,7 @@ footer {
   display: flex;
   justify-content: space-around;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .footer-container .footer-top {
     flex-wrap: wrap;
   }
@@ -619,7 +671,7 @@ footer {
 .footer-container .footer-top .footer-subscribe {
   width: 30%;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .footer-container .footer-top .footer-subscribe {
     width: 80%;
     margin: 2rem;

@@ -1,6 +1,7 @@
 const navBar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', (event) => {
+//shrink the navigation bar upon scrolling
+window.addEventListener('scroll', () => {
   //let currentScrollPos = window.pageYOffset;
   if (document.documentElement.scrollTop > 5 ) {
     navBar.classList.add('nav-scroll');
@@ -16,6 +17,8 @@ window.addEventListener('resize', () => {
     navBar.style.padding = '';
   }
 })
+
+//hamburger menu for mobile view
 
 const hamburger = document.querySelector('.navbar .fa-bars');
 const close = document.querySelector('.navbar .fa-times');
@@ -33,6 +36,8 @@ close.addEventListener('click', () => {
   hamburger.style.display = 'block';
 })
 
+//disable selected links
+
 let links = document.querySelectorAll('.nav-link a');
 
 links.forEach(item => item.addEventListener('click', () => {
@@ -41,3 +46,18 @@ links.forEach(item => item.addEventListener('click', () => {
   }
 }))
 
+//scroll to top button
+let scrollTop = document.querySelector('.scroll-top');
+
+window.addEventListener('scroll', () => {
+  //let currentScrollPos = window.pageYOffset;
+  if (document.documentElement.scrollTop > 5 ) {
+    scrollTop.style.display = 'block';
+  } else {
+    scrollTop.style.display = 'none';
+  }
+})
+
+scrollTop.addEventListener('click', () => {
+  document.documentElement.scrollTop = 0;
+})
