@@ -1,44 +1,46 @@
 .about {
   margin-top: 80px;
-  background: linear-gradient(to left, fadein(@main-blue6, 20%), fadein(@main-blue1, 20%));
+  background: linear-gradient( rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2) );
+  background-position:center top;
   color: white;
-  height: 80vh;
-  min-height: 400px;
+  background-size: cover;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
 
   @media @tablet {
-    height: 70vh;
+    margin-top: 60px;
+    padding: 3rem;
   }
 
-  @media @phone {
-    margin-top: 60px;
+  @media only screen and (max-width: 620px) {
     flex-direction: column;
-    height: 100vh;
+
   }
 
   &-text {
+    width: 30vw;
+    margin: 0 5rem;
     align-self: center;
-    margin-left: 2%;
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    @media @tablet {
-      align-self: flex-end;
-      margin-bottom: 5rem;
+    @media only screen and (max-width: 620px) {
+      width: 100%;
+      padding: 3rem 5rem;
     }
 
       h2 {
-        font-size: 4rem;
-        padding: 2rem 0;
+        font-size: 3rem;
+        font-weight: bold;
+        padding: 3rem 0;
 
         @media @tablet {
-          font-size: 3.5rem;
-          padding: 1rem 0;
+          font-size: cal(2.5rem+ 0.5vw);
         }
 
         @media @phone {
@@ -47,30 +49,27 @@
       }
 
       p {
-        padding: 2rem 0;
+        line-height: 2rem;
+        padding: 1rem 0;
       }
 
     button {
       .button-color(white, @main-blue7);
       .button-style(@btn-width: 150px);
+      margin: 2rem 0;
     }
 
  
   }
-
-  .image-container {
-    width: 70vw;
-    min-width: 500px;
-    background: linear-gradient(to right, fadein(@main-blue6, 20%), fadein(@main-blue1, 20%));
-    border-top-left-radius: 350px;
-    border-top-right-radius: 350px;
-
     img {
-      width: 70%;
-      margin: 0 15%;
-      position: relative;
+      width: 45vw;
+
+      @media only screen and (max-width: 620px) {
+        align-self: center;
+        width: 80%;
+      }
     }  
-  }
+  
 
 }
 
@@ -145,14 +144,13 @@
 }
 
 
-
-
-.rationale {
+.rationale-text {
+  background: @main-blue1;
   color: white;
-  background: @main-blue3;
   font-size: 1.6rem;
   padding: 1rem 0;
   margin: 2rem 0;
+ 
 
   h2 {
     padding: 2rem;
@@ -252,212 +250,3 @@
 }
 
 
-
-
-.about-team {
-  margin-top: 80px;
-
-  h2 {
-    color: @main-blue7;
-    padding: 3rem 0;
-
-  }
-  
-  .team {
-    display: flex;
-    flex-direction: column;
-    
-    .team-card {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      width: 100%;
-      color: white;    
-      font-size: 3rem;
-      padding: 2rem 0;
-      overflow: hidden;
-      cursor: pointer;
-
-      .team-content {
-        background: white;
-        border-radius: 15px;
-        margin: 2% 8%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem 0;
-
-        @media @phone {
-          flex-direction: column;
-        }
-        
-        img {
-          width: 30%;
-          padding: 1%;
-
-          @media @tablet {
-            width: 40%;
-          }
-
-          @media @phone {
-            width: 80%;
-          }
-        }
-
-
-        .team-name {
-          width: 40%;
-
-          @media @tablet {
-            width:50%;
-          }
-
-          @media @phone {
-            width: 80%;
-          }
-
-          p {
-            color: @main-color;
-            font-size: 3rem;
-            padding: 3rem;
-
-            @media @tablet {
-              font-size: 2.6rem;
-              padding: 2rem;
-            }
-          }
-
-          a {
-            text-decoration: none;
-            color: @main-color;
-          }
-          a:hover {
-            color: @main-blue7;
-          }
-
-          .fab {
-            font-size: 5rem;
-          }
-        }
-      }
-      
-      .team-hidden {
-        display: none;
-      }
-    }
-
-
-
-
-    .team-lead {
-      background: @main-blue1;
-    }
-
-    .front-end {
-      background: @main-blue2;
-    }
-
-    .back-end {
-      background: @main-blue3;
-    }
-
-    .ux-design {
-      background: @main-blue4;
-    }
-
-    .ui-design1 {
-      background: @main-blue5;
-    }
-
-    .ui-design2 {
-      background: @main-blue6;
-    }
-  }
-}
-
-footer {
-  background: @footer-gray;
-  color: @main-blue7;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  color: white;
-
-  h3 {
-    padding: 1.8rem 0;
-  }
-
-  .footer-top {
-    display: flex;
-    justify-content: space-around;
-
-    @media @tablet {
-      flex-wrap: wrap;
-    }
-
-    .footer-connect {
-      a {
-        text-decoration: none;
-        color: white;
-        padding-right: 1.8rem;
-      }
-
-      a:hover {
-        color: @main-blue7;
-      }
-
-      .fab {
-        font-size: 3rem;
-      }
-    }
-
-    .footer-subscribe {
-      width: 30%;
-
-      @media @tablet {
-        width: 80%;
-        margin: 2rem;
-      }
-
-      form {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 2rem 0;
-
-        input {
-          font-family: cursive;
-          font-size: 1.6rem;
-        }
-
-        button {
-          .button-color(@footer-gray, white);
-          border: 2px solid white;
-          .button-style(@radius: 0, @btn-font-size: 1.6rem, @btn-width: auto);
-        }
-      }
-    }
-
-
-  }
-  
-  .footer-bottom {
-    text-align: center;
-
-    p {
-      font-size: 1.4rem;
-      padding: 3rem 0 1.6rem 0 ;
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-    }
-
-    a:hover {
-      color: @main-blue7;
-    }
-  }
-}

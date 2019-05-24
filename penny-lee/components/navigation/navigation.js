@@ -31,10 +31,12 @@ hamburger.addEventListener('click', () => {
 })
 
 close.addEventListener('click', () => {
-  navLinks.setAttribute('style', 'transition: all 0.5s ease; transform: translateX(500px)');
+  navLinks.setAttribute('style', 'transition: all 0.5s ease; transform: translateX(700px)');
   close.style.display = 'none';
   hamburger.style.display = 'block';
 })
+
+
 
 //disable selected links
 

@@ -1,0 +1,83 @@
+footer {
+  background: @footer-gray;
+  color: @main-blue7;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  h3 {
+    padding: 1.8rem 0;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-around;
+
+    @media @tablet {
+      flex-wrap: wrap;
+    }
+
+    .footer-connect {
+      a {
+        text-decoration: none;
+        color: white;
+        padding-right: 1.8rem;
+      }
+
+      a:hover {
+        color: @main-blue7;
+      }
+
+      .fab {
+        font-size: 3rem;
+      }
+    }
+
+    .footer-subscribe {
+      width: 30%;
+
+      @media @tablet {
+        width: 80%;
+        margin: 2rem;
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+
+        input {
+          font-family: cursive;
+          font-size: 1.6rem;
+        }
+
+        button {
+          .button-color(@footer-gray, white);
+          border: 2px solid white;
+          .button-style(@radius: 0, @btn-font-size: 1.6rem, @btn-width: auto);
+        }
+      }
+    }
+  }
+  
+  .footer-bottom {
+    text-align: center;
+
+    p {
+      font-size: 1.4rem;
+      padding: 3rem 0 1.6rem 0 ;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    a:hover {
+      color: @main-blue7;
+    }
+  }
+}

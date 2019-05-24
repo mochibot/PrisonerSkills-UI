@@ -178,7 +178,7 @@ header .navbar {
   padding: 2rem 0;
   transition: all 0.3s ease;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 620px) {
   header .navbar {
     height: 70px;
     padding: 0.5rem;
@@ -208,7 +208,7 @@ header .navbar .fas {
 header .navbar .fa-bars {
   display: none;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 620px) {
   header .navbar .fa-bars {
     display: block;
   }
@@ -227,7 +227,7 @@ header .navbar .nav-link a {
   text-decoration: none;
   margin: 0 1%;
   padding: 1rem;
-  border: 3px solid rgba(0, 0, 0, 0);
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
 }
 header .navbar .nav-link a:hover {
   border-bottom: 3px solid #0071CC;
@@ -255,15 +255,15 @@ header .navbar .nav-link button:hover {
 header .navbar .nav-link .selected-link {
   border-bottom: 3px solid #0071CC;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 620px) {
   header .navbar .nav-link .selected-link {
     border-bottom: 3px solid #A5BBD4;
     color: #8d8d8d;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 620px) {
   header .navbar .nav-link {
-    transform: translateX(500px);
+    transform: translateX(700px);
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -290,49 +290,50 @@ header .nav-scroll {
 }
 .about {
   margin-top: 80px;
-  background: linear-gradient(to left, #a5bbd4, #0f69cc);
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)), url('../images/background.png');
+  background-position: center top;
   color: white;
-  height: 80vh;
-  min-height: 400px;
+  background-size: cover;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
 }
 @media only screen and (max-width: 800px) {
   .about {
-    height: 70vh;
+    margin-top: 60px;
+    padding: 3rem;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 620px) {
   .about {
-    margin-top: 60px;
     flex-direction: column;
-    height: 100vh;
   }
 }
 .about-text {
+  width: 30vw;
+  margin: 0 5rem;
   align-self: center;
-  margin-left: 2%;
   display: flex;
   text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 620px) {
   .about-text {
-    align-self: flex-end;
-    margin-bottom: 5rem;
+    width: 100%;
+    padding: 3rem 5rem;
   }
 }
 .about-text h2 {
-  font-size: 4rem;
-  padding: 2rem 0;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 3rem 0;
 }
 @media only screen and (max-width: 800px) {
   .about-text h2 {
-    font-size: 3.5rem;
-    padding: 1rem 0;
+    font-size: cal(3rem);
   }
 }
 @media only screen and (max-width: 500px) {
@@ -341,7 +342,8 @@ header .nav-scroll {
   }
 }
 .about-text p {
-  padding: 2rem 0;
+  line-height: 2rem;
+  padding: 1rem 0;
 }
 .about-text button {
   background: white;
@@ -355,6 +357,7 @@ header .nav-scroll {
   padding: 0.8rem 2rem;
   cursor: pointer;
   outline: none;
+  margin: 2rem 0;
 }
 .about-text button:hover {
   background: #0071CC;
@@ -362,17 +365,14 @@ header .nav-scroll {
   border: 2px solid white;
   transition: all 0.3s ease;
 }
-.about .image-container {
-  width: 70vw;
-  min-width: 500px;
-  background: linear-gradient(to right, #a5bbd4, #0f69cc);
-  border-top-left-radius: 350px;
-  border-top-right-radius: 350px;
+.about img {
+  width: 45vw;
 }
-.about .image-container img {
-  width: 70%;
-  margin: 0 15%;
-  position: relative;
+@media only screen and (max-width: 620px) {
+  .about img {
+    align-self: center;
+    width: 80%;
+  }
 }
 .top-images {
   width: 100%;
@@ -439,29 +439,29 @@ header .nav-scroll {
   transition: all 0.3s ease;
   opacity: 0.2;
 }
-.rationale {
+.rationale-text {
+  background: #0F69CC;
   color: white;
-  background: #4988CD;
   font-size: 1.6rem;
   padding: 1rem 0;
   margin: 2rem 0;
 }
-.rationale h2 {
+.rationale-text h2 {
   padding: 2rem;
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
 }
-.rationale ul {
+.rationale-text ul {
   list-style-position: outside;
   padding: 0 10rem;
 }
 @media only screen and (max-width: 500px) {
-  .rationale ul {
+  .rationale-text ul {
     padding: 0 5rem;
   }
 }
-.rationale ul li {
+.rationale-text ul li {
   padding: 1.8rem 0;
   list-style-type: disc;
 }
@@ -551,7 +551,6 @@ header .nav-scroll {
   font-size: 3rem;
   padding: 2rem 0;
   overflow: hidden;
-  cursor: pointer;
 }
 .about-team .team .team-card .team-content {
   background: white;

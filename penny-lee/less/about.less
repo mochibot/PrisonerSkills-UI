@@ -1,0 +1,119 @@
+.about-team {
+  margin-top: 80px;
+
+  h2 {
+    color: @main-blue7;
+    padding: 3rem 0;
+  }
+  
+  .team {
+    display: flex;
+    flex-direction: column;
+    
+    .team-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      color: white;    
+      font-size: 3rem;
+      padding: 2rem 0;
+      overflow: hidden;
+      
+      .team-content {
+        background: white;
+        border-radius: 15px;
+        margin: 2% 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+
+        @media @phone {
+          flex-direction: column;
+        }
+        
+        img {
+          width: 30%;
+          padding: 1%;
+
+          @media @tablet {
+            width: 40%;
+          }
+
+          @media @phone {
+            width: 80%;
+          }
+        }
+
+
+        .team-name {
+          width: 40%;
+
+          @media @tablet {
+            width:50%;
+          }
+
+          @media @phone {
+            width: 80%;
+          }
+
+          p {
+            color: @main-color;
+            font-size: 3rem;
+            padding: 3rem;
+
+            @media @tablet {
+              font-size: 2.6rem;
+              padding: 2rem;
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: @main-color;
+          }
+          a:hover {
+            color: @main-blue7;
+          }
+
+          .fab {
+            font-size: 5rem;
+          }
+        }
+      }
+      
+      .team-hidden {
+        display: none;
+      }
+    }
+
+
+
+
+    .team-lead {
+      background: @main-blue1;
+    }
+
+    .front-end {
+      background: @main-blue2;
+    }
+
+    .back-end {
+      background: @main-blue3;
+    }
+
+    .ux-design {
+      background: @main-blue4;
+    }
+
+    .ui-design1 {
+      background: @main-blue5;
+    }
+
+    .ui-design2 {
+      background: @main-blue6;
+    }
+  }
+}
