@@ -26,16 +26,29 @@ const navLinks = document.querySelector('.nav-link');
 
 hamburger.addEventListener('click', () => {
   navLinks.setAttribute('style', 'transition: all 0.5s ease; transform: translateX(0)');
-  hamburger.style.display = 'none';
+  hamburger.style.transform = 'translateY(-100px)';
   close.style.display = 'block';
 })
 
 close.addEventListener('click', () => {
   navLinks.setAttribute('style', 'transition: all 0.5s ease; transform: translateX(700px)');
   close.style.display = 'none';
-  hamburger.style.display = 'block';
+  hamburger.style.transform = 'translateY(0)';
 })
 
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 620) {
+    navLinks.style.transform = `translateX(0)`;
+    hamburger.style.display = 'none';
+    close.style.display = 'none';
+  } else {
+    navLinks.setAttribute('style', 'transition: none; transform: translateX(700px)');
+    hamburger.style.display = 'block';
+    close.style.display = 'none';
+  }
+})
+  
 
 //disable selected links
 
