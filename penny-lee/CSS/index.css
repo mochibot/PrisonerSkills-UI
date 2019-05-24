@@ -288,9 +288,14 @@ header .nav-scroll {
   box-shadow: 0 5px 5px -7px #333;
   padding: 0.6rem 0;
 }
+.about-background {
+  width: 100%;
+  position: relative;
+  z-index: -2;
+}
 .about {
   margin-top: 80px;
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)), url("https://i.ibb.co/MCvbYh6/background.png");
   background-position: center top;
   color: white;
   background-size: cover;
