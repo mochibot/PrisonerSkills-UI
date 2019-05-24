@@ -63,7 +63,7 @@ header {
       justify-content: flex-end;
       
 
-      a {
+      :not(:last-child) {
         font-size: 2rem;
         color: @nav-font-color;
         text-decoration: none;
@@ -76,11 +76,14 @@ header {
         }
       }
 
-      button {
-        margin-left: 1rem;
-        .button-color(@main-blue7, white);
-        .button-style( @btn-font-size: 1.8rem, @btn-width: auto);
+      :last-child {
+          text-decoration: none;
+          margin-left: 1rem;
+          .button-color(@main-blue7, white);
+          .button-style( @btn-font-size: 1.8rem, @btn-width: auto);
       }
+      
+    
 
       .selected-link {
         border-bottom: 3px solid @main-blue7; 
