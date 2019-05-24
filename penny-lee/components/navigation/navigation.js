@@ -37,7 +37,6 @@ close.addEventListener('click', () => {
 })
 
 
-
 //disable selected links
 
 let links = document.querySelectorAll('.nav-link a');

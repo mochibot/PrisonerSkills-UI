@@ -162,7 +162,7 @@ p {
 }
 .scroll-top .fas {
   font-size: 4rem;
-  color: #0071CC;
+  color: #0F69CC;
 }
 header .navbar {
   position: fixed;
@@ -191,7 +191,7 @@ header .navbar .logo {
 header .navbar .logo #sitename-short {
   font-size: 4.4rem;
   background: white;
-  color: #0071CC;
+  color: #0F69CC;
   border-radius: 9px;
   padding: 2px 5px 2px 2px;
   letter-spacing: -3px;
@@ -203,7 +203,7 @@ header .navbar .logo #sitename-full {
 }
 header .navbar .fas {
   font-size: 3rem;
-  color: #0071CC;
+  color: #0F69CC;
 }
 header .navbar .fa-bars {
   display: none;
@@ -221,47 +221,6 @@ header .navbar .nav-link {
   display: flex;
   justify-content: flex-end;
 }
-header .navbar .nav-link :not(:last-child) {
-  font-size: 2rem;
-  color: #8d8d8d;
-  text-decoration: none;
-  margin: 0 1%;
-  padding: 1rem;
-  border-bottom: 3px solid rgba(0, 0, 0, 0);
-}
-header .navbar .nav-link :not(:last-child):hover {
-  border-bottom: 3px solid #0071CC;
-}
-header .navbar .nav-link :last-child {
-  text-decoration: none;
-  margin-left: 1rem;
-  background: #0071CC;
-  color: white;
-  border: 2px solid #0071CC;
-  display: block;
-  border-radius: 10px;
-  font-size: 1.8rem;
-  width: auto;
-  text-align: center;
-  padding: 0.8rem 2rem;
-  cursor: pointer;
-  outline: none;
-}
-header .navbar .nav-link :last-child:hover {
-  background: white;
-  color: #0071CC;
-  border: 2px solid #0071CC;
-  transition: all 0.3s ease;
-}
-header .navbar .nav-link .selected-link {
-  border-bottom: 3px solid #0071CC;
-}
-@media only screen and (max-width: 620px) {
-  header .navbar .nav-link .selected-link {
-    border-bottom: 3px solid #A5BBD4;
-    color: #8d8d8d;
-  }
-}
 @media only screen and (max-width: 620px) {
   header .navbar .nav-link {
     transform: translateX(700px);
@@ -274,15 +233,62 @@ header .navbar .nav-link .selected-link {
     padding: 3rem 0;
     width: 100%;
   }
-  header .navbar .nav-link a {
+}
+header .navbar .nav-link :not(:last-child) {
+  font-size: 2rem;
+  color: #8d8d8d;
+  text-decoration: none;
+  margin: 0 1%;
+  padding: 1rem;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+}
+@media only screen and (max-width: 620px) {
+  header .navbar .nav-link :not(:last-child) {
     color: white;
   }
-  header .navbar .nav-link a:hover {
+}
+header .navbar .nav-link :not(:last-child):hover {
+  border-bottom: 3px solid #0F69CC;
+}
+@media only screen and (max-width: 620px) {
+  header .navbar .nav-link :not(:last-child):hover {
     border-bottom: 3px solid #A5BBD4;
     color: #8d8d8d;
   }
-  header .navbar .nav-link button {
-    margin-top: 1rem;
+}
+header .navbar .nav-link :last-child {
+  text-decoration: none;
+  margin-left: 1rem;
+  background: #0F69CC;
+  color: white;
+  border: 2px solid #0F69CC;
+  display: block;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  width: auto;
+  text-align: center;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  outline: none;
+}
+header .navbar .nav-link :last-child:hover {
+  background: white;
+  color: #0F69CC;
+  border: 2px solid #0F69CC;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 620px) {
+  header .navbar .nav-link :last-child {
+    margin-top: 1.8rem;
+  }
+}
+header .navbar .nav-link .selected-link {
+  border-bottom: 3px solid #0F69CC;
+}
+@media only screen and (max-width: 620px) {
+  header .navbar .nav-link .selected-link {
+    border-bottom: 3px solid #A5BBD4;
+    color: #8d8d8d;
   }
 }
 header .nav-scroll {
@@ -353,7 +359,7 @@ header .nav-scroll {
 }
 .about-text button {
   background: white;
-  color: #0071CC;
+  color: #0F69CC;
   border: 2px solid white;
   display: block;
   border-radius: 10px;
@@ -366,7 +372,7 @@ header .nav-scroll {
   margin: 2rem 0;
 }
 .about-text button:hover {
-  background: #0071CC;
+  background: #0F69CC;
   color: white;
   border: 2px solid white;
   transition: all 0.3s ease;
@@ -539,7 +545,7 @@ header .nav-scroll {
   margin-top: 80px;
 }
 .about-team h2 {
-  color: #0071CC;
+  color: #0F69CC;
   padding: 3rem 0;
 }
 .about-team .team {
@@ -614,7 +620,7 @@ header .nav-scroll {
   color: #242323;
 }
 .about-team .team .team-card .team-content .team-name a:hover {
-  color: #0071CC;
+  color: #0F69CC;
 }
 .about-team .team .team-card .team-content .team-name .fab {
   font-size: 5rem;
@@ -642,7 +648,7 @@ header .nav-scroll {
 }
 footer {
   background: #6b6b6b;
-  color: #0071CC;
+  color: #0F69CC;
 }
 .footer-container {
   display: flex;
@@ -667,7 +673,7 @@ footer {
   padding-right: 1.8rem;
 }
 .footer-container .footer-top .footer-connect a:hover {
-  color: #0071CC;
+  color: #0F69CC;
 }
 .footer-container .footer-top .footer-connect .fab {
   font-size: 3rem;
@@ -722,5 +728,5 @@ footer {
   color: white;
 }
 .footer-container .footer-bottom a:hover {
-  color: #0071CC;
+  color: #0F69CC;
 }
