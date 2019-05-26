@@ -302,7 +302,7 @@ header .nav-scroll {
 }
 .about {
   margin-top: 80px;
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)), url("penny-lee/images/background.svg");
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)), url('https://svgshare.com/i/DGc.svg');
   background-position: center top;
   color: white;
   background-size: cover;
